@@ -7,10 +7,10 @@
     <title>Ford</title>    
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/carousel.js"></script>
+    <script src="js/carousel.js" defer></script>
 </head>
 <body> 
-    <header>       
+    <header>
         <div>
             <img src="img/logo-ford-256.png" width="150" class="logo" />
         </div>
@@ -29,19 +29,34 @@
         </nav>
 
     </header>
+
+
     <main>
         <div id="carousel">
+            <div class="slideCarrossel">
+                <img src="img/imagem_1.jpg" alt="">
+                <img src="img/imagem_2.jpg" alt="">
+                <img src="img/imagem_3.jpg" alt="">
+            </div>
+            
+            <button class="Esquerdo">‹</button>
+            <button class="Direito">›</button>
         </div>
+        
         <div id="carousel-title">
+            <p>titulo carrossel</p>
         </div>
+
         <script>
-             //insert each image on carousel
             carouselArr.push(new Carousel("imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
             carouselArr.push(new Carousel("imagem_2.jpg","Ford a nossa história","#"));
             carouselArr.push(new Carousel("imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
             Carousel.Start(carouselArr);
         </script>
+
     </main>
+
+
     <footer>
         <nav id="social">
             <ul>

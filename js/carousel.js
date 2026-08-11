@@ -98,18 +98,39 @@ class Carousel {
                 image: "img/imagem_2.jpg",
                 title: "Ford Mustang - Desempenho e Tecnologia",
                 url: "lancamento.html"
+            },
+            {
+                image: "img/imagem_3.jpg",
+                title: "Nova Ford Bronco Sport 2022",
+                url: "lancamento.html"
             }
         ];
         this.currentIndex = 0;
         this.intervalId = null;
+        this.intervalTime = 2000;
     }
 
     // Inicializa o carrossel automotivo (troca a cada 2 segundos)
     start() {
         this.showCurrent();
+        this.startAuto();
+    }
+
+    startAuto() {
+        if (this.intervalId) {
+            clearInterval(this.intervalId);
+        }
+
         this.intervalId = setInterval(() => {
             this.next();
-        }, 2000); // Passo 5: 2 segundos
+        }, this.intervalTime);
+    }
+
+    stopAuto() {
+        if (this.intervalId) {
+            clearInterval(this.intervalId);
+            this.intervalId = null;
+        }
     }
 
     // Avança para o próximo item
@@ -150,10 +171,22 @@ const myCarousel = new Carousel();
 document.addEventListener("DOMContentLoaded", () => {
     myCarousel.start();
 
-    // Passo 6: Eventos para botões manuais (se existirem botões com IDs 'btn-next' e 'btn-prev' no HTML)
-    const btnNext = document.getElementById("btn-next");
-    const btnPrev = document.getElementById("btn-prev");
+    const btnNext = document.getElementById("direito");
+    const btnPrev = document.getElementById("esquerdo");
 
-    if (btnNext) btnNext.addEventListener("click", () => myCarousel.next());
-    if (btnPrev) btnPrev.addEventListener("click", () => myCarousel.prev());
+    if (btnNext) {
+        btnNext.addEventListener("click", () => {
+            myCarousel.stopAuto();
+            myCarousel.next();
+            myCarousel.startAuto();
+        });
+    }
+
+    if (btnPrev) {
+        btnPrev.addEventListener("click", () => {
+            myCarousel.stopAuto();
+            myCarousel.prev();
+            myCarousel.startAuto();
+        });
+    }
 });

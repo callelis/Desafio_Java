@@ -11,9 +11,18 @@ html {
 }
 
 div#carousel {
-    height: 46vh;
-    width: 100%;
-     max-height: 628px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: min(90vw, 900px);
+    max-height: 628px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: visible;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -109,12 +118,30 @@ footer div {
     margin-right: 40px;
 }
 
-button:hover {
-    background: #1b357e;
-}
+
 button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background: #1351d8;
+    width: 45px;
+    height: 50px;
     color: #fff;
     border: 0px;
     border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.95;
+}
+
+button:hover {
+    background: #1b357e;
+}
+
+#esquerdo {
+    left: -60px;
+}
+
+#direito {
+    right: -60px;
 }

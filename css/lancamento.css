@@ -11,7 +11,9 @@ ul.modelcars li {
     width: 300px;
     vertical-align: top;
 }
-
+#compare img{
+    width: 90%;
+}
 img.photocar {
     display: block;
     width: 250px;

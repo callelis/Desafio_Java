@@ -12,6 +12,7 @@ class contato {
     }
 }
 
+
 function Post(form) {
 
             event.preventDefault();

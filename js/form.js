@@ -32,7 +32,7 @@ function Enviar() {
     var nome = document.getElementById("nomeid");
 
     if (nome.value != "idNome") {
-        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+        alert('Obrigado, sr(a) ' + nome.value + '! Os dados foram enviados com sucesso.');
     }
 
 }

@@ -32,7 +32,7 @@ function GetCarArrPosition(arr, carClass) {
 function SetCarToCompare(el, carClass) {
    
     if(el.checked && carArr.length >= 2) {
-                alert("Você pode selecionar apenas 2 carros para comparar");
+                alert("Você pode comparar somente dois carros por vez");
                 el.checked = false;
                 return;
         }
@@ -50,7 +50,7 @@ function SetCarToCompare(el, carClass) {
 
 function ShowCompare() {
     if(carArr.length < 2) {
-        alert("Precisa marcar 2 carros para apresentar a comparação");
+        alert("Precisa marcar dois carros para apresentar a comparação.");
         return;
     }
 
@@ -101,3 +101,5 @@ function UpdateCompareTable() {
     document.querySelector("#compare_roda_1").innerHTML = compare1.roda;
 
 }
+
+//carlinha

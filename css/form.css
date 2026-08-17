@@ -30,12 +30,26 @@ main div {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.ulLGPDcheckbox {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
 
 .forms {
     display: block;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
+.txtForm{
+    width: 300px;
+    text-align: left;
+    font-size: 9px;
+}
 h2 {
     text-align: left;
     font-weight: 800;

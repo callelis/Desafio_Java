@@ -30,11 +30,19 @@ function Post(form) {
 function Enviar() {
 
     var nome = document.getElementById("nomeid");
+    const checado = document.getElementById("LGPDO");
 
-    if (nome.value != "idNome") {
+    if (nome.value != "idNome" && checado.checked) {
         alert('Obrigado, sr(a) ' + nome.value + '! Os dados foram enviados com sucesso.');
     }
 
+    else {
+        alert("Você precisa concordar com os termos de uso primeiro.");
+
+    }
 }
+
+
+
 
 //carlinha

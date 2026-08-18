@@ -45,11 +45,13 @@ main div {
     align-items: center;
 }
 
+
 .txtForm{
     width: 300px;
     text-align: justify;
     font-size: 10px;
-    padding: 8px;
+    padding: 9px;
+
 }
 
 label{

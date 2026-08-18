@@ -15,7 +15,6 @@ class contato {
 
 function Post(form) {
 
-            event.preventDefault();
 
   let data = new contato(form.elements.namedItem("nome").value,
             form.elements.namedItem("sobrenome").value, 
@@ -24,7 +23,6 @@ function Post(form) {
             form.elements.namedItem("telefone").value, 
             form.elements.namedItem("contato").value);
             console.log(data);
-            Enviar(data);
 }
 
 function Enviar() {
@@ -32,7 +30,7 @@ function Enviar() {
     var nome = document.getElementById("nomeid");
     const checado = document.getElementById("LGPDO");
 
-    if (nome.value != "idNome" && checado.checked) {
+    if (nome.value != "nome" && checado.checked) {
         alert('Obrigado, sr(a) ' + nome.value + '! Os dados foram enviados com sucesso.');
     }
 
